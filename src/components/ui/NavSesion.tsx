@@ -22,13 +22,13 @@ export default function NavDeSesion() {
       {/* Botones de sesión */}
       <div className="flex gap-4 items-center">
         <SignInButton>
-          <button className="bg-white text-orange-700 rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+          <button className="text-white bg-orange-700 rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
             Iniciar sesión
           </button>
         </SignInButton>
 
         <SignUpButton>
-          <button className="bg-white text-pink-800 rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+          <button className="text-white bg-yellow-600 rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
             Registrarse
           </button>
         </SignUpButton>

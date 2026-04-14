@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
-import { ClerkProvider, Show, UserButton } from '@clerk/nextjs'
+import { ClerkProvider, Show } from '@clerk/nextjs'
+import { esES } from "@clerk/localizations"
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
 import NavDeSesion from '../components/ui/NavSesion'
 import Nav from  '../components/ui/Nav'
+import Footer from '../components/ui/Footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -43,7 +45,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClerkProvider>
+        <ClerkProvider
+            localization={esES}
+            appearance={{
+              elements: {
+                formButtonPrimary: "bg-amber-900 text-white hover:bg-amber-700",
+                card: "shadow-lg rounded-xl border border-amber-200",
+                headerTitle: "text-amber-900 font-bold",
+                avatarBox: "rounded-full"
+              },
+            }}
+        >
+
+
           <header className="w-full">
             <Show when="signed-out">
                     <NavDeSesion />
@@ -54,6 +68,7 @@ export default function RootLayout({
           </header>
           {children}
         </ClerkProvider>
+        <Footer/>
       </body>
     </html>
   )
