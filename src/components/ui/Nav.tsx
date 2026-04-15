@@ -8,7 +8,7 @@ export default function NavDeSesion() {
     <nav className="justify-between items-center px-6 py-4 bg-amber-900 text-white flex w-full">
       {/* Logo + nombre */}
       <div className="flex items-center gap-3">
-        <Link href="/src/app/dashboard/page.tsx">
+        <Link href="/dashboard">
             <Image
           src="/gallinaLogoSinLetras.png"
           alt="Logo GALLINA"
@@ -22,10 +22,19 @@ export default function NavDeSesion() {
 
       {/* Botones de sesión */}
       <div className="flex gap-6 items-center text-bolder">
-        <Link href="../../app/dashboard/page.tsx" className="hover:text-yellow-300">Panel</Link>
+        <Link href="/dashboard" className="hover:text-yellow-300">Panel</Link>
         <Link href="/calendario" className="hover:text-yellow-300">Calendario</Link>
         <Link href="/lotes" className="hover:text-yellow-300">Gestión de Huevos</Link>
-        <UserButton />
+        <UserButton
+          appearance={{
+            elements: {
+              avatarBox: {
+                width: "40px",
+                height: "40px"
+              }
+            },
+          }}
+        />
       </div>
     </nav>
   );

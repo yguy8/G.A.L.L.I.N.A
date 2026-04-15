@@ -5,7 +5,7 @@ import { Show, SignInButton, SignUpButton } from "@clerk/nextjs";
 export default function LandingPage() {
   return (
     <>
-      <main className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-b from-yellow-50 to-white px-6">
+      <main className="flex flex-col items-center justify-start min-h-screen bg-gradient-to-b from-yellow-50 to-white px-6 pb-20">
       {/* Logo arriba */}
       <div className="mt-8">
         <Image
@@ -23,7 +23,7 @@ export default function LandingPage() {
         G.A.L.L.I.N.A
       </h1>
       <p className="text-lg text-gray-600 text-center max-w-xl mt-4">
-        Gestor Avícola para incubación y nacimiento de aves. <br /> Precisión y alertas
+      <b>G</b>estor <b>A</b>vícola <b>L</b>isto para <b>L</b>levar la cuenta de <b>I</b>ncubación y proceso de <b>N</b>acimiento de <b>A</b>ves. <br /> Precisión y alertas
         en tiempo real para que nunca pierdas una fecha crítica.
       </p>
 

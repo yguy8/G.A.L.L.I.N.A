@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { ClerkProvider, Show } from '@clerk/nextjs'
 import { esES } from "@clerk/localizations"
 import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
+import "./globals.css"
 
 import NavDeSesion from '../components/ui/NavSesion'
 import Nav from  '../components/ui/Nav'
@@ -46,18 +46,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ClerkProvider
-            localization={esES}
-            appearance={{
-              elements: {
-                formButtonPrimary: "bg-amber-900 text-white hover:bg-amber-700",
-                card: "shadow-lg rounded-xl border border-amber-200",
-                headerTitle: "text-amber-900 font-bold",
-                avatarBox: "rounded-full"
-              },
-            }}
+          localization={esES}
+          appearance={{
+            elements: {
+              formButtonPrimary:
+                "bg-amber-900 text-white hover:bg-amber-700 rounded-lg",
+              card: "shadow-lg rounded-xl border border-amber-200 bg-white",
+              headerTitle: "text-amber-900 font-bold",
+              headerSubtitle: "text-amber-700",
+              avatarBox: "border-2 border-amber-900 rounded-full",
+            },
+          }}
         >
-
-
           <header className="w-full">
             <Show when="signed-out">
                     <NavDeSesion />
